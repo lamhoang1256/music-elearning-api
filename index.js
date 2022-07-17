@@ -6,8 +6,8 @@ const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 
-const authRoutes = require("./src/api/routes/authRoutes");
-const userRoutes = require("./src/api/routes/userRoutes");
+const authRoutes = require("./src/api/auth/auth.router");
+const userRoutes = require("./src/api/user/user.router");
 
 const app = express();
 dotenv.config();

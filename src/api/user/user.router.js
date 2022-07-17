@@ -1,4 +1,4 @@
-const userControllers = require("../controllers/userControllers");
+const userControllers = require("./user.controller");
 const router = require("express").Router();
 
 router.get("/", userControllers.getAllUser);
