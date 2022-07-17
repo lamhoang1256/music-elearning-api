@@ -7,6 +7,7 @@ const cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 
 const authRoutes = require("./src/api/routes/authRoutes");
+const userRoutes = require("./src/api/routes/userRoutes");
 
 const app = express();
 dotenv.config();
@@ -21,6 +22,7 @@ app.use(cors());
 app.use(morgan("common"));
 
 app.use("/api/auth", authRoutes);
+app.use("/api/user", userRoutes);
 
 app.listen(8080, () => {
   console.log("Server is running");

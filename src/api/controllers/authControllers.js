@@ -1,7 +1,7 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 
-const authController = {
+const authControllers = {
   registerUser: async (req, res) => {
     try {
       const salt = await bcrypt.genSalt(10);
@@ -34,4 +34,4 @@ const authController = {
   },
 };
 
-module.exports = authController;
+module.exports = authControllers;
