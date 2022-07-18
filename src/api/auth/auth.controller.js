@@ -6,7 +6,7 @@ const authControllers = {
     try {
       const salt = await bcrypt.genSalt(10);
       const hashed = await bcrypt.hash(req.body.password, salt);
-      const newUser = await new User({
+      const newUser = new User({
         username: req.body.username,
         email: req.body.email,
         password: hashed,

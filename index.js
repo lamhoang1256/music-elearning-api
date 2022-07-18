@@ -8,6 +8,7 @@ var bodyParser = require("body-parser");
 
 const authRoutes = require("./src/api/auth/auth.router");
 const userRoutes = require("./src/api/user/user.router");
+const categoryRoutes = require("./src/api/category/category.router");
 
 const app = express();
 dotenv.config();
@@ -23,6 +24,7 @@ app.use(morgan("common"));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
+app.use("/api/category", categoryRoutes);
 
 app.listen(8080, () => {
   console.log("Server is running");
