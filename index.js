@@ -31,6 +31,7 @@ app.use("/api/user", userRoutes);
 app.use("/api/category", categoryRoutes);
 app.use("/api/course", courseRoutes);
 
-app.listen(8080, () => {
-  console.log("Server is running");
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`server is running on port ${PORT}`);
 });
